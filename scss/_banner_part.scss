@@ -5,13 +5,14 @@
     .single_banner_part {
         position: relative;
         z-index: 3;
-        height: 100vh;
+        height: 750px;
         display: flex;
-        align-items: center;
 
         @media #{$mobile} {
             height: 500px;
         }
+
+        /*
 
         &:after {
             position: absolute;
@@ -24,6 +25,8 @@
             opacity: .45;
             z-index: -1;
         }
+
+        */
 
         [class^="banner_animation_"],
         [class*="banner_animation_"] {
@@ -51,24 +54,6 @@
             @media #{$medium_device} {
                 left: 15px;
                 top: 20px;
-                max-width: 40px;
-            }
-        }
-
-        .banner_animation_2 {
-            left: 100px;
-            bottom: 200px;
-
-            @media #{$tab} {
-                z-index: -1;
-                bottom: 50px;
-                left: 20px;
-                max-width: 40px;
-            }
-
-            @media #{$medium_device} {
-                bottom: 10px !important;
-                left: 30px !important;
                 max-width: 40px;
             }
         }
@@ -316,9 +301,65 @@
 .home_two_banner {
     .single_banner_part {
         &.home_two_bg {
-            @include background ("../img/banner_image2.png");
-            background-position: center right;
+            @include background ("../img/home-banner.jpg");
+            background-position: center center;
         }
+
+        .floating-left-button {
+            position: absolute;
+            top: 49%;
+            left: 29%;
+
+            @media #{$tab_device} {
+                top: 49%;
+                left: 18%;
+            }
+
+            @media #{$mobile} {
+                top: 49%;
+                left: 5%;
+            }
+        }
+          
+        .floating-right-button {
+            position: absolute;
+            top: 65%;
+            right: 23%;
+
+            @media #{$tab_device} {
+                top: 65%;
+                right: 5%;
+            }
+
+            @media #{$mobile} {
+                top: 65%;
+                right: 1%;
+            }
+        }
+          
+        .btn-join {
+            display: block;
+            padding: 5px 15px;
+            background-color: #5783e6;
+            color: #FFFFFF;
+            font-weight: 900;
+            font-size: 16px;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: #dd5aad;
+                color: #FFFFFF;
+            }
+
+            &:active {
+                background-color: #5783e6;
+                color: #FFFFFF;
+            }
+          
+        }
+          
+
+        /*
 
         &:after {
             background: -webkit-gradient(linear, left top, right top, from(#f5f5f5), color-stop(44%, #f5f5f5), color-stop(58%, transparent));
@@ -338,6 +379,8 @@
                 background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 3%, transparent 52%);
             }
         }
+
+        */
 
         .banner_iner {
             text-align: left;
@@ -376,15 +419,16 @@
             }
         }
 
-        .banner_animation_2 {
+        .banner_animation_22 {
             position: absolute;
-            left: 155px;
-            bottom: 150px;
+            left: 35%;
+            top: 190px;
+            z-index: 0;
 
             @media #{$mobile} {
                 z-index: -1;
-                bottom: 50px;
-                left: 20px;
+                left: 20%;
+                top: 150px;
                 max-width: 40px;
             }
         }
@@ -402,18 +446,102 @@
             }
         }
 
-        .banner_animation_4 {
+        .banner_animation_44 {
             position: absolute;
-            right: 5%;
-            top: 40%;
+            right: 200px;
+            bottom: 200px;
+            height: 40px;
 
             @media #{$mobile} {
                 z-index: -1;
-                top: 100px;
-                left: 20px;
+                right: 20px;
+                bottom: 100px;
                 max-width: 40px;
+
             }
         }
+
+        .banner-socials {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .social-icons-body {
+                width: 150px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+    
+            .social-hash-tags {
+                display: block;
+                background-color: #f6c6ea;
+                border-radius: 15px;
+                font-size: 13px;
+                font-weight: 700;
+                color: rgb(222,86,171);
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+          }
+
+          @media (max-width: 991px){
+            .navbar-toggler {
+                border: 0 solid transparent;
+                padding: 0;
+                font-size: 22px;
+            }
+            .navbar-nav {
+                margin-right: 0;
+            }
+            .dropdown-menu {
+                padding: 0 15px;
+                margin: 0;
+                background-color: #fabce4;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+            .navbar-collapse{
+                position: absolute;
+                top: 74px;
+                background-color: transparent;
+                z-index: 9;
+                width: 100%;
+                box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.05);
+            }
+            .dropdown-item{
+                padding: 8px 10px;
+            }
+            .dropdown-toggle::after {
+                border: 0px solid transparent;
+                content: "";
+                font-family: "Font Awesome 5 Free";
+                vertical-align: 0px;
+                float: right;
+            }
+            .dropdown{
+                &.show{
+                    .dropdown-toggle::after {
+                        float: right;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .top-logo_area {
+            width: 100%;
+            display:flex; 
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
     }
 }
 
@@ -949,34 +1077,17 @@
     }
 }
 @media (min-width: 991px){
-    .header_part .header .navbar .nav-item > .nav-link{
+    .banner_part .navbar .nav-item > .nav-link{
         position: relative;
         z-index: 1;
-        &:before{
-            position: absolute;
-            content: "";
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image: url(../img/menu_bg_shape.png);
-            width: 50px;
-            height: 50px;
-            background-size: contain;
-            z-index: -1;
-            transition: all .3s;
-            opacity: 0;
-        }
+        background-color: #dd5aad;
+        padding: 10px 20px;
+        font-weight: 700;
         &:hover{
-            &:before{
-                opacity: 1;
-            }
+            background-color: #5783e6;
         }
         &.active{
-            &:before{
-                opacity: 1;
-            }
+            background-color: #5783e6;
         }
     }
 }
