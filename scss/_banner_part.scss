@@ -301,7 +301,7 @@
 .home_two_banner {
     .single_banner_part {
         &.home_two_bg {
-            @include background ("../img/home-banner.jpg");
+            @include background ("../img/home-banner-decorated.jpg");
             background-position: center center;
         }
 
@@ -1079,16 +1079,52 @@
 @media (min-width: 991px){
     .banner_part .navbar .nav-item > .nav-link{
         position: relative;
-        z-index: 1;
-        background-color: #dd5aad;
-        padding: 10px 20px;
-        font-weight: 700;
+        color: #dd5aad;
+        font-weight: 900;
+        font-size: 15px;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border-radius: 25px;
+        -webkit-text-stroke: 0.015em transparent;
+        text-shadow: none;
+        z-index: 10;
+        
+        &:before{
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/menu_bg_shape.png);
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            z-index: -1;
+            transition: all .3s;
+            opacity: 0;
+        }
+
+        &:hover{
+            &:before{
+                opacity: 1;
+            }
+        }
+        &.active{
+            &:before{
+                opacity: 1;
+            }
+        }
+        /*
         &:hover{
             background-color: #5783e6;
         }
         &.active{
             background-color: #5783e6;
         }
+        */
     }
 }
 
