@@ -5,14 +5,13 @@
     .single_banner_part {
         position: relative;
         z-index: 3;
-        height: 750px;
+        height: 100vh;
         display: flex;
+        align-items: center;
 
         @media #{$mobile} {
             height: 500px;
         }
-
-        /*
 
         &:after {
             position: absolute;
@@ -25,8 +24,6 @@
             opacity: .45;
             z-index: -1;
         }
-
-        */
 
         [class^="banner_animation_"],
         [class*="banner_animation_"] {
@@ -54,6 +51,24 @@
             @media #{$medium_device} {
                 left: 15px;
                 top: 20px;
+                max-width: 40px;
+            }
+        }
+
+        .banner_animation_2 {
+            left: 100px;
+            bottom: 200px;
+
+            @media #{$tab} {
+                z-index: -1;
+                bottom: 50px;
+                left: 20px;
+                max-width: 40px;
+            }
+
+            @media #{$medium_device} {
+                bottom: 10px !important;
+                left: 30px !important;
                 max-width: 40px;
             }
         }
@@ -100,10 +115,10 @@
             z-index: 9;
 
             h2 {
-                font-size: 90px;
+                font-size: 60px;
                 font-weight: 700;
-                color: $white;
-                line-height: 1.11;
+                color: #FFF;
+                line-height: 1;
                 margin-bottom: 16px;
 
                 @media #{$mobile} {
@@ -301,65 +316,9 @@
 .home_two_banner {
     .single_banner_part {
         &.home_two_bg {
-            @include background ("../img/home-banner-decorated.jpg");
-            background-position: center center;
+            @include background ("../img/banner_image2.png");
+            background-position: center right;
         }
-
-        .floating-left-button {
-            position: absolute;
-            top: 49%;
-            left: 29%;
-
-            @media #{$tab_device} {
-                top: 49%;
-                left: 18%;
-            }
-
-            @media #{$mobile} {
-                top: 49%;
-                left: 5%;
-            }
-        }
-          
-        .floating-right-button {
-            position: absolute;
-            top: 65%;
-            right: 23%;
-
-            @media #{$tab_device} {
-                top: 65%;
-                right: 5%;
-            }
-
-            @media #{$mobile} {
-                top: 65%;
-                right: 1%;
-            }
-        }
-          
-        .btn-join {
-            display: block;
-            padding: 5px 15px;
-            background-color: #5783e6;
-            color: #FFFFFF;
-            font-weight: 900;
-            font-size: 16px;
-            border-radius: 20px;
-
-            &:hover {
-                background-color: #dd5aad;
-                color: #FFFFFF;
-            }
-
-            &:active {
-                background-color: #5783e6;
-                color: #FFFFFF;
-            }
-          
-        }
-          
-
-        /*
 
         &:after {
             background: -webkit-gradient(linear, left top, right top, from(#f5f5f5), color-stop(44%, #f5f5f5), color-stop(58%, transparent));
@@ -380,8 +339,6 @@
             }
         }
 
-        */
-
         .banner_iner {
             text-align: left;
 
@@ -398,37 +355,36 @@
             }
 
             h2 {
-                color: $heading_color_2;
-                font-size: 65px;
-                line-height: 1.2;
-                margin-bottom: 8px;
+                color: #FFFFFF;
+                font-size: 50px;
+                line-height: 1;
+                margin-bottom: 10px;
                 font-weight: 800;
                 @media #{$mobile} {
-                    font-size: 30px;
-                    line-height: 1.4;
+                    font-size: 25px;
+                    line-height: 1.1;
                 }
 
                 @media #{$tab_device} {
-                    font-size: 40px;
-                    line-height: 1.3;
+                    font-size: 30px;
+                    line-height: 1.1;
                 }
 
                 @media #{$medium_device} {
-                    font-size: 50px;
+                    font-size: 30px;
                 }
             }
         }
 
-        .banner_animation_22 {
+        .banner_animation_2 {
             position: absolute;
-            left: 35%;
-            top: 190px;
-            z-index: 0;
+            left: 155px;
+            bottom: 150px;
 
             @media #{$mobile} {
                 z-index: -1;
-                left: 20%;
-                top: 150px;
+                bottom: 50px;
+                left: 20px;
                 max-width: 40px;
             }
         }
@@ -446,102 +402,18 @@
             }
         }
 
-        .banner_animation_44 {
+        .banner_animation_4 {
             position: absolute;
-            right: 200px;
-            bottom: 200px;
-            height: 40px;
+            right: 5%;
+            top: 40%;
 
             @media #{$mobile} {
                 z-index: -1;
-                right: 20px;
-                bottom: 100px;
+                top: 100px;
+                left: 20px;
                 max-width: 40px;
-
             }
         }
-
-        .banner-socials {
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .social-icons-body {
-                width: 150px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-bottom: 5px;
-            }
-    
-            .social-hash-tags {
-                display: block;
-                background-color: #f6c6ea;
-                border-radius: 15px;
-                font-size: 13px;
-                font-weight: 700;
-                color: rgb(222,86,171);
-                padding-left: 10px;
-                padding-right: 10px;
-              }
-          }
-
-          @media (max-width: 991px){
-            .navbar-toggler {
-                border: 0 solid transparent;
-                padding: 0;
-                font-size: 22px;
-            }
-            .navbar-nav {
-                margin-right: 0;
-            }
-            .dropdown-menu {
-                padding: 0 15px;
-                margin: 0;
-                background-color: #fabce4;
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            }
-            .navbar-collapse{
-                position: absolute;
-                top: 74px;
-                background-color: transparent;
-                z-index: 9;
-                width: 100%;
-                box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.05);
-            }
-            .dropdown-item{
-                padding: 8px 10px;
-            }
-            .dropdown-toggle::after {
-                border: 0px solid transparent;
-                content: "";
-                font-family: "Font Awesome 5 Free";
-                vertical-align: 0px;
-                float: right;
-            }
-            .dropdown{
-                &.show{
-                    .dropdown-toggle::after {
-                        float: right;
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-        }
-
-        .top-logo_area {
-            width: 100%;
-            display:flex; 
-            justify-content: center;
-            padding: 20px;
-            position: relative;
-        }
-
     }
 }
 
@@ -1077,19 +949,9 @@
     }
 }
 @media (min-width: 991px){
-    .banner_part .navbar .nav-item > .nav-link{
+    .header_part .header .navbar .nav-item > .nav-link{
         position: relative;
-        color: #dd5aad;
-        font-weight: 900;
-        font-size: 15px;
-        padding: 5px 20px;
-        text-transform: uppercase;
-        background-color: transparent;
-        border-radius: 25px;
-        -webkit-text-stroke: 0.015em transparent;
-        text-shadow: none;
-        z-index: 10;
-        
+        z-index: 1;
         &:before{
             position: absolute;
             content: "";
@@ -1106,7 +968,6 @@
             transition: all .3s;
             opacity: 0;
         }
-
         &:hover{
             &:before{
                 opacity: 1;
@@ -1117,14 +978,6 @@
                 opacity: 1;
             }
         }
-        /*
-        &:hover{
-            background-color: #5783e6;
-        }
-        &.active{
-            background-color: #5783e6;
-        }
-        */
     }
 }
 

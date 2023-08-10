@@ -89,12 +89,13 @@
             items: 4,
             loop: true,
             nav: false,
-            dots: false,
+            dots: true,
             autoplay: true,
             autoplayHoverPause: true,
-            margin: 15,
+            margin: 25,
             smartSpeed: 300,
             dotsSpeed: 300,
+            stagePadding: 20,
             autoplayTimeout: 3000,
             responsive: {
                 0: {
@@ -116,11 +117,11 @@
     var testimonial = $(".testimonial_slider");
     if (testimonial.length) {
         testimonial.owlCarousel({
-            items: 2,
+            items: 1,
             loop: true,
             margin: 30,
             nav: false,
-            dots: false,
+            dots: true,
             autoplay: true,
             autoplayHoverPause: true,
             smartSpeed: 500,
