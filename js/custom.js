@@ -61,6 +61,33 @@
         });
     }
 
+    
+    var toodler_popup = $('.gallery_popup_toodler_img');
+    if (toodler_popup.length > 0) {
+        toodler_popup.magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+        });
+    }
+
+    var kids_popup = $('.gallery_popup_kids_img');
+    if (kids_popup.length > 0) {
+        kids_popup.magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+        });
+    }
+
     //counter js
     var time = $('.counter')
     if (time.length > 0) {

@@ -4605,6 +4605,39 @@ font-size: 12px;
   background-image: url(../img/gallery/pre_toodler/gallery_pre_06.jpg);
 }
 
+.our_gallery .pre_bg_2 {
+  background-image: url(../img/gallery/pre_toodler/gallery_pre_02.jpg);
+}
+
+.our_gallery .pre_bg_3 {
+  background-image: url(../img/gallery/pre_toodler/gallery_pre_03.jpg);
+}
+
+.our_gallery .toodler_bg_1 {
+  background-image: url(../img/gallery/toodler/gallery_toodler_01.jpg);
+}
+
+.our_gallery .toodler_bg_2 {
+  background-image: url(../img/gallery/toodler/gallery_toodler_02.jpg);
+}
+
+.our_gallery .toodler_bg_3 {
+  background-image: url(../img/gallery/toodler/gallery_toodler_01.jpg);
+}
+
+.our_gallery .ag_kids_bg_1 {
+  background-image: url(../img/gallery/ag_kids/gallery_kids_01.jpg);
+}
+
+.our_gallery .ag_kids_bg_2 {
+  background-image: url(../img/gallery/ag_kids/gallery_kids_02.jpg);
+}
+
+.our_gallery .ag_kids_bg_3 {
+  background-image: url(../img/gallery/ag_kids/gallery_kids_03.jpg);
+}
+
+
 .our_gallery [class^=gallery_animation_],
 .our_gallery [class*=" gallery_animation_"] {
   position: absolute;
