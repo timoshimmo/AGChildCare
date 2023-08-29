@@ -1,13 +1,13 @@
 /********* banner part css here ********/
+
 .banner_part {
     overflow: hidden;
 
     .single_banner_part {
         position: relative;
         z-index: 3;
-        height: 100vh;
-        display: flex;
-        align-items: center;
+        width: 100%;
+        max-width: 100%;
 
         @media #{$mobile} {
             height: 500px;
@@ -164,6 +164,8 @@
                 }
             }
         }
+
+       
     }
 
     .bg_1 {
@@ -315,10 +317,12 @@
 //  @include background ("../img/home_2_banner.png");
 .home_two_banner {
     .single_banner_part {
+        /*
         &.home_two_bg {
             @include background ("../img/banner_image2.png");
             background-position: center right;
         }
+        
 
         &:after {
             background: -webkit-gradient(linear, left top, right top, from(#f5f5f5), color-stop(44%, #f5f5f5), color-stop(58%, transparent));
@@ -338,7 +342,7 @@
                 background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 3%, transparent 52%);
             }
         }
-
+*/
         .banner_iner {
             text-align: left;
 
@@ -650,14 +654,15 @@
 //banner style 3 css here
 .banner_style_3 {
     .single_banner_part {
-        @include background ('../img/banner_4.png');
+        //@include background ('../img/banner_4.png');
 
-        &:after {
+       /* &:after {
             background-image: -moz-linear-gradient(90deg, rgb(252, 63, 114) 0%, rgb(252, 90, 134) 100%);
             background-image: -webkit-linear-gradient(90deg, rgb(252, 63, 114) 0%, rgb(252, 90, 134) 100%);
             background-image: -ms-linear-gradient(90deg, rgb(252, 63, 114) 0%, rgb(252, 90, 134) 100%);
             opacity: .9;
         }
+        */
 
         @media #{$mobile} {
             height: auto;

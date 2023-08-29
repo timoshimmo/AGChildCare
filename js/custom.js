@@ -35,6 +35,32 @@
         });
     }
 
+    var infant_popup = $('.gallery_popup_infant_img');
+    if (infant_popup.length > 0) {
+        infant_popup.magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+        });
+    }
+
+    var pre_popup = $('.gallery_popup_pre_img');
+    if (pre_popup.length > 0) {
+        pre_popup.magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+        });
+    }
+
     //counter js
     var time = $('.counter')
     if (time.length > 0) {
@@ -86,11 +112,11 @@
     var popular_courses = $(".gallery_slider");
     if (popular_courses.length) {
         popular_courses.owlCarousel({
-            items: 4,
+            items: 1,
             loop: true,
             nav: false,
             dots: true,
-            autoplay: true,
+            autoplay: false,
             autoplayHoverPause: true,
             margin: 25,
             smartSpeed: 300,
@@ -102,13 +128,13 @@
                     items: 1
                 },
                 576: {
-                    items: 2
+                    items: 1
                 },
                 767: {
-                    items: 3
+                    items: 1
                 },
                 1200: {
-                    items: 4
+                    items: 1
                 }
             }
         });
@@ -134,6 +160,24 @@
                     items: 2
                 }
             }
+        });
+    }
+
+    var upcoming_events = $(".upcoming_slider");
+    if (upcoming_events.length) {
+        upcoming_events.owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            navText:["<p class='nav-btn prev-slide'> < </p>","<p class='nav-btn next-slide'> > </p>"],
+            dots: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            margin: 25,
+            smartSpeed: 300,
+            dotsSpeed: 300,
+            stagePadding: 20,
+            autoplayTimeout: 3000,
         });
     }
 
