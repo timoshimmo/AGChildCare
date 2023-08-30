@@ -289,7 +289,7 @@ button:focus,
 }
 
 .section_bg {
-  background-color: #f6f7fa;
+  background-color: #5c88e1;
 }
 
 .section_bg_1 {
@@ -436,6 +436,24 @@ button:focus,
      1px  1px 5px white;
 }
 
+.title_type_06_medium {
+  font-family: 'MoreSugarRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ff66c4;
+  text-shadow: 
+     2px   0  0   white, 
+    -2px   0  0   white, 
+     0    2px 0   white, 
+     0   -2px 0   white, 
+     1px  1px 0   white, 
+    -1px -1px 0   white, 
+     1px -1px 0   white, 
+    -1px  1px 0   white,
+     1px  1px 5px white;
+}
+
 .subtitle_type_01 {
   font-family: 'BebasNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 19px;
@@ -525,6 +543,15 @@ button:focus,
       -1px  1px 0   #fff,
        1px  1px 2px #fff;
 
+}
+
+.subtitle_type_08 {
+  font-family: 'BebasNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-align: start;
+ 
 }
 
 @media (max-width: 767.98px) {
@@ -801,11 +828,22 @@ button:focus,
 }
 
 .kid_title {
-  font-family: 'AlloyInk', 'MoreSugarRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'MoreSugarRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #e455aa;
+  text-shadow:
+  2px   0  0   #5c88e1, 
+ -2px   0  0   #5c88e1, 
+  0    2px 0   #5c88e1, 
+  0   -2px 0   #5c88e1, 
+  1px  1px 0   #5c88e1, 
+ -1px -1px 0   #5c88e1, 
+  1px -1px 0   #5c88e1, 
+ -1px  1px 0   #5c88e1,
+  1px  1px 5px #5c88e1;
 }
 
 .kid_subtitle {
@@ -1749,14 +1787,14 @@ font-size: 12px;
 
 /******** header css end *********/
 .breadcrumb_part {
-  background-image: url("../img/breadcrumb_bg.png");
+  background-image: url("../img/bg_patterns/1.png");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   position: relative;
   display: flex;
   align-items: center;
-  height: 400px;
+  height: 200px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .breadcrumb_part {
@@ -1777,6 +1815,7 @@ font-size: 12px;
     margin-top: 0;
   }
 }
+/*
 .breadcrumb_part h2 {
   font-size: 55px;
   font-weight: 700;
@@ -1797,17 +1836,20 @@ font-size: 12px;
     margin-bottom: 5px;
   }
 }
+*/
 .breadcrumb_part .breadcrumb_iner_link {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .breadcrumb_part .breadcrumb_iner_link a {
-  font-size: 16px;
-  color: #c9c9d1;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
 }
 .breadcrumb_part .breadcrumb_iner_link a:hover {
-  color: #fe4b7b;
+  color: #fff;
+  text-decoration: underline;
 }
 .breadcrumb_part .breadcrumb_iner_link p {
   font-size: 16px;
@@ -1852,7 +1894,7 @@ font-size: 12px;
   bottom: 25%;
 }
 .breadcrumb_part .breadcrumb_animation_12 {
-  right: 31%;
+  right: 27%;
   bottom: 23%;
 }
 .breadcrumb_part .breadcrumb_animation_13 {
@@ -3078,6 +3120,7 @@ font-size: 12px;
   background-image: url("../img/bg_patterns/contact_bg_image.png");
   background-position: center;
   background-size: cover;
+  background-repeat: repeat;
 }
 
 .about_section .img_section {
@@ -3085,6 +3128,7 @@ font-size: 12px;
   min-height: 250px;
   z-index: 2;
 }
+
 
 .about-button-area {
   width: 100%;
@@ -3351,6 +3395,23 @@ font-size: 12px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .s4_about_section .about_img_6 {
+    margin-left: 15px;
+  }
+}
+
+
+
+.s4_about_section .about_img_7 {
+  z-index: -1;
+  width: 350px;
+}
+@media (max-width: 767.98px) {
+  .s4_about_section .about_img_7 {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .s4_about_section .about_img_7 {
     margin-left: 15px;
   }
 }
@@ -4215,6 +4276,7 @@ font-size: 12px;
   right: -25px;
   bottom: 5%;
 }
+
 
 .event_style_2 .event_animation_1 {
   left: 8%;
@@ -5875,10 +5937,9 @@ opacity: 0.2;
 .single_count_section h4 {
   font-size: 45px;
   line-height: 1;
-  color: #fe4b7b;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #ffc600;
+  color: #fff;
 }
 @media (max-width: 991px) {
   .single_count_section h4 {
@@ -5898,10 +5959,13 @@ opacity: 0.2;
 }
 
 .count_section {
-  background-color: #fc3f72;
+  background-image: url("../img/bg_patterns/contact_bg_image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
   overflow: hidden;
   position: relative;
-  padding: 100px 0;
+  padding: 60px 0;
   z-index: 1;
 }
 .count_section [class^=count_animation_],
@@ -6420,6 +6484,10 @@ opacity: 0.2;
 .get_start_part {
   position: relative;
   z-index: 1;
+  /*background-image: url("../img/activities_cloudy_bg.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;*/
 }
 .get_start_part .video_section {
   padding: 20px;
@@ -6453,12 +6521,22 @@ opacity: 0.2;
 }
 .get_start_part .get_start_content .get_start_btn {
   font-size: 16px;
-  color: #fe4b7b;
+  color: #ff66c4;
   position: relative;
   z-index: 1;
   font-weight: 700;
   margin-top: 28px;
   display: inline-block;
+  text-shadow:
+  2px   0  0   #ffffff, 
+ -2px   0  0   #ffffff, 
+  0    2px 0   #ffffff, 
+  0   -2px 0   #ffffff, 
+  1px  1px 0   #ffffff, 
+ -1px -1px 0   #ffffff, 
+  1px -1px 0   #ffffff, 
+ -1px  1px 0   #ffffff,
+  1px  1px 5px #ffffff;
 }
 @media (max-width: 991px) {
   .get_start_part .get_start_content .get_start_btn {
@@ -6477,7 +6555,7 @@ opacity: 0.2;
   bottom: -3px;
   width: 100%;
   height: 1px;
-  background-color: #fe4b7b;
+  background-color: #fff;
 }
 .get_start_part .get_start_content .get_start_btn:hover i {
   padding-left: 8px;
@@ -7718,16 +7796,19 @@ opacity: 0.2;
   position: absolute;
   left: 0;
   top: 3px;
-  color: #fe4b7b;
+  color: #e455aa;
   font-size: 25px;
 }
 .contact_sidebar .single_contact_sidebar h5 {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 5px;
+  font-family: 'BebasNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contact_sidebar .single_contact_sidebar p {
   line-height: 24px;
+  font-family: 'BebasNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .blog_sidebar .social_icon {
@@ -7741,6 +7822,11 @@ opacity: 0.2;
 #contactMap {
   height: 100% !important;
 }
+
+.contact_page {
+  position: relative;
+}
+
 
 .contact_page .form_single_item input, .contact_page .form_single_item textarea {
   border: 1px solid #f5f9fb;
@@ -7779,20 +7865,18 @@ opacity: 0.2;
   margin-right: 0;
 }
 .contact_page .social_icon a[href*=facebook] {
-  background-color: #475993;
-  border-color: #475993;
+  background-color: #e455aa;
+  border-color: #e455aa;
 }
 .contact_page .social_icon a[href*=facebook]:hover {
-  background-color: #fff;
-  color: #475993;
+  opacity: 0.6;
 }
 .contact_page .social_icon a[href*=instagram] {
-  background-color: #FE2A39;
-  border-color: #FE2A39;
+  background-color: #e455aa;
+  border-color: #e455aa;
 }
 .contact_page .social_icon a[href*=instagram]:hover {
-  background-color: #fff;
-  color: #FE2A39;
+  opacity: 0.6;
 }
 .contact_page .social_icon a[href*=linkedin] {
   background-color: #0e76a8;
@@ -7812,6 +7896,37 @@ opacity: 0.2;
 }
 .contact_page .cu_btn {
   margin-top: 30px;
+}
+
+.contact_page [class^=contact_animation_], .contact_page [class*=" contact_animation_"] {
+  position: absolute;
+  z-index: -1;
+}
+.contact_page .contact_animation_1 {
+  position: absolute;
+  left: 20%;
+  top: 22%;
+}
+@media (max-width: 767.98px) {
+  .contact_page .contact_animation_1 {
+    left: 10%;
+    top: 12%;
+  }
+}
+.contact_page .contact_animation_2 {
+  position: absolute;
+  left: 10px;
+  top: 55%;
+}
+.contact_page .contact_animation_3 {
+  position: absolute;
+  right: 8%;
+  top: 15%;
+}
+.contact_page .contact_animation_4 {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
 }
 
 .dl_countdown_wrapper {
